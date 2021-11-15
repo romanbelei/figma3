@@ -1,0 +1,24 @@
+@import "./utils/body-setting";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/_visually-hidden.scss";
+@import "./utils/breakpoints";
+
+// // Студія
+
+@import "./components/_logo";
+@import "./components/header-page";
+@import "./components/soc-icon";
+@import "./components/btn";
+@import "./components/baner";
+@import "./components/descript";
+@import "./components/work-section";
+@import "./components/comand";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/backdrop";
+@import "./components/modal";
+
+// // Портфоліо
+@import "./components/portfolio-btns";
+@import "./components/card-portfolio";

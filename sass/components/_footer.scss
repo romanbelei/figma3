@@ -1,0 +1,167 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $color-footer-backgr;
+  line-height: 1.7;
+  text-align: left;
+}
+.footer__block {
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+// обгортка лого + аддрес
+.wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+.footer__block--logolink{
+  display: block;
+}
+.footer__logo{
+  @media screen and (max-width: 767px) {
+  font-size: 24px;
+}
+}
+.address {
+  font-style: inherit;
+}
+.footer__link {
+  color: $color-solid;
+  text-decoration: none;
+}
+.footer__address {
+  color: $color-white;
+}
+.footer__list:first-child {
+  margin-top: 20px;
+}
+
+
+// Приєднуйтесь + соцмережі
+.join {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @media screen and (max-width:768px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width:768px) and (max-width:1200px) {
+    padding-top: 15px;
+    }
+  @media screen and (min-width:1200px) {
+  margin-left: 70px;
+  text-align-last: left;
+  }
+}
+.join__paragraf {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer__form-paragraf {
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  @media screen and (max-width:1199px) {
+    text-align: center;
+  }
+}
+.join__link {
+  display: flex;
+  justify-content: center;
+}
+.join__link-item {
+  background-color: #44454e;
+  box-sizing: 44px;
+  border-radius: 50%;
+  &:not(:last-child) {
+  margin-right: 10px;
+  }
+}
+.footer__socc-icon {
+  fill: white;
+}
+
+// Подпишитесь на рассылку інпут + кнопка
+.footer__form {
+  @media screen and(max-width:1199px) {
+    @include Margin-L-R-auto;
+    margin-top: 60px;
+}
+@media screen and(min-width:1199px) {
+  margin-left: 93px;
+}
+}
+.join__block {
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+.join-input {
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 14px;
+  }
+}
+.footer__button {
+  @include centerflex;
+  background: $color-blue;
+  width: 200px;
+  height: 50px;
+  padding: 10px 27px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+.footer__send-icon {
+  fill: white;
+  margin-left: 10px;
+}

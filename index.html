@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мета-тег viewport важен для адаптивных страниц</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <!--  Шапка -->
+    <header class="header">
+      <div class="header__block container">
+        
+          <img width="199" height="50" srcset="./image/sprite/logo 1x.png, ./image/sprite/logo 2x.png" src="./image/sprite/logo 1x.png" alt="Логотип"/>
+        
+        <button type="button" class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" aria-label="мобільне меню">
+            <use class="icon-cross" href="./img/sprite.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+        <div class="menu-conteiner js-menu-container" id="mobile-menu">
+          
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item"><a href="" class="nav__link nav__link--current">Home</a></li>
+              <li class="nav__item"><a href="" class="nav__link">About us</a></li>
+              <li class="nav__item"><a href="" class="nav__link">How it’s made?</a></li>
+              <li class="nav__item"><a href="" class="nav__link">Our products</a></li>
+              <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+            </ul>
+          </nav>
+          <div>
+            <button class="header__button big-button button" data-modal-open>Buy now</button>
+          </div>
+          
+          <button class="menu-button menu-button-close js-close-menu">
+            <svg width="40" height="40" aria-label="закривання мобільного меню" >
+              <use class="icon-menu" href="./img/sprite.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="header__button-tablet big-button button" data-modal-open>Buy now</button>
+      </div>
+    </header>
+    <main>
+      <!--++++++++++++++++++++++++++++++++++      Банер     ++++++++++++++++++++++++++++++++++-->
+      <!-- <section class="section baner">
+        <h1 class="baner__title">Эффективные решения <br> для вашего бизнеса</h1>
+        <button class="big-button button" data-modal-open>Заказать услугу</button>
+      </section> -->
+      
+      <!--++++++++++++++++++++++++++++++++++      Опис      +++++++++++++++++++++++++++++++++++++++-->
+      <!-- <section class="section descript">
+        <h2 class="visually-hidden">Описание</h2>
+        <div class="container">
+          <ul class="descript__list list">
+            <li class="descript__item">
+              <div class="descript__beefor">
+                <svg class="descript__icon">
+                  <use xlink:href="./img/sprite.svg#icon-antenna"></use>
+                </svg>
+              </div>
+              <h3 class="descript__title">Внимание к деталям</h3>
+              <p class="descript__paragraf">
+                Идейные соображения, а также начало повседневной работы по формированию позиции.
+              </p>
+            </li>
+
+            <li class="descript__item">
+              <div class="descript__beefor">
+                <svg class="descript__icon">
+                  <use xlink:href="./img/sprite.svg#icon-clock"></use>
+                </svg>
+              </div>
+              <h3 class="descript__title">Пунктуальность</h3>
+              <p class="descript__paragraf">
+                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+              </p>
+            </li>
+
+            <li class="descript__item">
+              <div class="descript__beefor">
+                <svg class="descript__icon">
+                  <use xlink:href="./img/sprite.svg#icon-diagram"></use>
+                </svg>
+              </div>
+              <h3 class="descript__title">Планирование</h3>
+              <p class="descript__paragraf">
+                Равным образом консультация с широким активом в значительной степени обуславливает.
+              </p>
+            </li>
+
+            <li class="descript__item">
+              <div class="descript__beefor">
+                <svg class="descript__icon">
+                  <use xlink:href="./img/sprite.svg#icon-astronaut"></use>
+                </svg>
+              </div>
+              <h3 class="descript__title">Современные технологии</h3>
+              <p class="descript__paragraf">
+                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+      <!--++++++++++++++++++++++++++++++++++      Чем мы занимаемся      +++++++++++++++++++++++++++++++++++++++-->
+      <!-- <section class="section working">
+        <div class="container">
+          <h2 class="working__title">Чем мы занимаемся</h2>
+          <ul class="working__list list">
+            <li class="working__list-item">
+              
+              <img  srcset="./img/img1.jpg 1x, ./img/img1@2x.jpg 2x" src="./img/img1@2x.jpg" alt="Фото розробника для ПК"/>
+              <div class="working__box-text">
+                <h3 class="working__list-text">Десктопные приложения</h3>
+              </div>
+            </li>
+
+            <li class="working__list-item">
+              <img  srcset="./img/img2.jpg 1x, ./img/img2@2x.jpg 2x" src="./img/img2.jpg" alt="моб. додатки" />
+              <div class="working__box-text">
+                <h3 class="working__list-text">Мобильные приложения</h3>
+              </div>
+            </li>
+
+            <li class="working__list-item">
+              <img srcset="./img/img3.jpg 1x, ./img/img3@2x.jpg 2x" src="./img/img3.jpg" alt="Вебдизайнер"  />
+              <div class="working__box-text">
+                <h3 class="working__list-text">Дизайнерские решения</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+      <!--++++++++++++++++++++++++++++++++++      Команда      +++++++++++++++++++++++++++++++++++++++-->
+      <!-- <section class="section comand">
+        <div class="container">
+          <h2 class="comand__title">Наша команда</h2>
+          <ul class="comand__list list">
+            <li class="comand__list-item">
+              <picture>
+                <source
+                  srcset="./img/comand1.jpg 1x, ./img/comand1@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/comand1.jpg    1x,
+                    ./img/tablet/comand1@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/desctop/comand1.jpg    1x,
+                    ./img/desctop/comand1@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+              <img src="./img/comand1.jpg" alt="Фото Игорь Демьяненко"  />
+              </picture>
+              <div class="comands__content">
+                <h3 class="comand__title-name">Игорь Демьяненко</h3>
+                <p lang="en" class="comand__paragraf">Product Designer</p>
+                <ul class="comand__link">
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="comand__list-item">
+              <picture>
+                <source
+                  srcset="./img/comand2.jpg 1x, ./img/comand2@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/comand2.jpg    1x,
+                    ./img/tablet/comand2@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/desctop/comand2.jpg    1x,
+                    ./img/desctop/comand2@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./img/comand2.jpg" alt="Фото Ольга Репина"  />
+              </picture>
+              <div class="comands__content">
+                <h3 class="comand__title-name">Ольга Репина</h3>
+                <p lang="en" class="comand__paragraf">Frontend Developer</p>
+                <ul class="comand__link">
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="comand__list-item">
+              <picture>
+                <source
+                  srcset="./img/comand3.jpg 1x, ./img/comand3@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/comand3.jpg    1x,
+                    ./img/tablet/comand3@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/desctop/comand3.jpg    1x,
+                    ./img/desctop/comand3@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+              <img src="./img/comand3.jpg" alt="Фото Николай Тарасов"  />
+              </picture>
+              <div class="comands__content">
+                <h3 class="comand__title-name">Николай Тарасов</h3>
+                <p lang="en" class="comand__paragraf">Marketing</p>
+                <ul class="comand__link">
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="comand__list-item">
+              <picture>
+                <source
+                  srcset="./img/comand4.jpg 1x, ./img/comand4@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/comand4.jpg    1x,
+                    ./img/tablet/comand4@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/desctop/comand4.jpg    1x,
+                    ./img/desctop/comand4@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./img/comand4.jpg" alt="Фото Михаил Ермаков"  />
+              </picture>
+              <div class="comands__content">
+                <h3 class="comand__title-name">Михаил Ермаков</h3>
+                <p lang="en" class="comand__paragraf">UI Designer</p>
+                <ul class="comand__link">
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="comand__link-item">
+                    <a href="" class="soc-icon-link">
+                      <svg class="soc-icon">
+                        <use xlink:href="./img/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+      <!--+++++++++++++++++++++++++++++++++    Постійні клієнти  +++++++++++++++++++++++++++++++++++++-->
+      <!-- <section class="section regular__customers">
+        <div class="container">
+          <h2 class="regular__customers-title">Постоянные клиенты</h2>
+          <ul class="regular__icon">
+            <li class="regular__item">
+              <a href="" class="regular__client-link">
+                <svg  width="106" height="60">
+                  <use xlink:href="./img/sprite.svg#icon-group1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="regular__item">
+              <a href="" class="regular__client-link">
+                <svg   width="106" height="60">
+                  <use xlink:href="./img/sprite.svg#icon-group2"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="regular__item">
+              <a href="" class="regular__client-link">
+                <svg   width="106" height="60">
+                  <use xlink:href="./img/sprite.svg#icon-group3"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="regular__item">
+              <a href="" class="regular__client-link">
+                <svg   width="106" height="60">
+                  <use xlink:href="./img/sprite.svg#icon-group4"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="regular__item">
+              <a href="" class="regular__client-link">
+                <svg   width="106" height="60">
+                  <use xlink:href="./img/sprite.svg#icon-group5"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="regular__item">
+              <a href="" class="regular__client-link">
+                <svg   width="106" height="60">
+                  <use xlink:href="./img/sprite.svg#icon-group6"></use>
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </section> -->
+    </main>
+    <!--+++++++++++++++++++++++++++++++++++++++     Підвал      ++++++++++++++++++++++++++++++++++++++-->
+    <!-- <footer class="footer">
+      <div class="container footer__block">
+       <div class="wrapper"> 
+        <div class="footer__block--logolink">
+          <a href="./index.html" class="footer__logo logo">Web<span class="logo-white">Studio</span></a>
+          <address class="address">
+            <ul class="footer__list">
+              <li>
+                <a
+                  href="https://goo.gl/maps/J4S7zrF2grUkDUh99"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  class="footer__address link"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li>
+                <a href="mail:info@example.com" class="footer__link link">info@example.com</a>
+              </li>
+              <li><a href="tel:+380991111111" class="footer__link link">+380991111111</a></li>
+            </ul>
+          </address>
+        </div>
+        <div class="join">
+          <p class="join__paragraf">присоединяйтесь</p>
+          <ul class="join__link">
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <form class="footer__form">
+          <strong class="footer__form-paragraf">Подпишитесь на рассылку</strong>
+          <div class="join__block">
+            <input class="join-input" type="email" name="email" id="email" placeholder="E-mail" />
+            <button type="submit" class="footer__button">
+              Подписаться
+              <svg class="footer__send-icon" width="24" height="24">
+                <use href="./img/sprite.svg#icon-iconfootersend"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+    </footer> -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__button-off" data-modal-close>
+          <svg class="modal__icon-close" width="30" height="30">
+            <use xlink:href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="form" autocomplete="on" novalidate>
+          <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+          <div class="form__field">
+            <label for="name">Имя</label>
+            <input type="name" class="form__input" name="name" id="name" />
+            <svg class="form__icon" width="18" height="18">
+              <use xlink:href="./img/sprite.svg#icon-modalperson"></use>
+            </svg>
+          </div>
+
+          <div class="form__field">
+            <label for="phone">Телефон</label>
+            <input type="tel" class="form__input" name="phone-number" id="phone" />
+            <svg class="form__icon" width="18" height="18">
+              <use xlink:href="./img/sprite.svg#icon-modalphone"></use>
+            </svg>
+          </div>
+
+          <div class="form__field">
+            <label for="email">Почта</label>
+            <input type="email" class="form__input" name="email" id="email" />
+            <svg class="form__icon" width="18" height="18">
+              <use xlink:href="./img/sprite.svg#icon-modalmail"></use>
+            </svg>
+          </div>
+
+          <div class="form__field">
+            <label for="coments" class="form__label">Коментарий</label>
+            <textarea
+              name="coments"
+              id="coments"
+              cols="30"
+              rows="10"
+              placeholder="Введите текст"
+              class="form__textarea"
+            ></textarea>
+          </div>
+          <div class="form__field-chek">
+            <label for="checkbox" class="checkbox-text">
+              <input
+                type="checkbox"
+                class="form__checkbox form__input"
+                name="checkbox"
+                id="checkbox"
+              />
+              <svg class="form__chek-icon" width="16" height="15">
+                <!-- <use xlink:href="./img/sprite.svg#icon-modalcheck"></use> -->
+                <use xlink:href="./img/sprite.svg#icon-modalcheck"></use>
+              </svg>
+              <span class="checktext">Соглашаюсь с рассылкой и принимаю</span>
+              <a href="" class="form__check-span">Условия договора</a>
+            </label>
+          </div>
+          <div class="modal__button">
+            <button type="submit" class="big-button">Отправить</button>
+          </div>
+        </form>
+      </div>s
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <!-- <script src="./js/menubutton.js"></script> -->
+  </body>
+</html>

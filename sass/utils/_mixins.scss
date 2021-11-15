@@ -1,0 +1,29 @@
+@mixin centerflex($type: flex) {
+  display: $type;
+  justify-content: center;
+  align-items: center;
+}
+@mixin Margin-L-R-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin background-S-R-P {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+  @mixin font($fz, $fw, $lh) {
+   font-size: $fz;
+   font-weight: $fw;
+   line-height: $lh;
+  }
+
+ // Щоб вставити використовувати нижче
+
+ // @include font(14px, 700, 1.17);
+
+// @include centerflex();
+
+// @include Margin-L-R-auto;
+
+// @include background-S-R-P;

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мета-тег viewport важен для адаптивных страниц</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!--  Шапка -->
+    <header class="header">
+      <div class="header__block container">
+        <a href="./index.html" class="logo">Web<span class="logo-black">Studio</span></a>
+        <button type="button" class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" aria-label="мобільне меню">
+            <use class="icon-cross" href="./img/sprite.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+        <div class="menu-conteiner js-menu-container" id="mobile-menu">
+          <button class="menu-button js-close-menu">
+            <svg width="40" height="40" aria-label="закривання мобільного меню" >
+              <use class="icon-menu" href="./img/sprite.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link nav__link--current">Портфолио</a>
+              </li>
+              <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="contact__list list">
+            <li class="contact__item">
+              <a class="contack__link" href="tel:+380961111111">
+                <svg class="mail-icon">
+                  <use xlink:href="./img/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact__item">
+              <a href="tel:+77777777777" class="contack__link">
+                <svg class="phone-icon" >
+                  <use href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+                +7 777 777 77 77
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-social-list">
+            <li class="menu-social-item"><a class="menu-social-link" href="">Instagram</a></li>
+            <li class="menu-social-item"><a class="menu-social-link" href="">Twitter</a></li>
+            <li class="menu-social-item"><a class="menu-social-link" href="">Facebook</a></li>
+            <li class="menu-social-item"><a class="menu-social-link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <ul class="portfolio__list-button list">
+          <li class="portfolio__list-item">
+            <button type="button" class="portfolio__button">Все</button>
+          </li>
+          <li class="portfolio__list-item">
+            <button type="button" class="portfolio__button">Веб-сайты</button>
+          </li>
+          <li class="portfolio__list-item">
+            <button type="button" class="portfolio__button">Приложения</button>
+          </li>
+          <li class="portfolio__list-item">
+            <button type="button" class="portfolio__button">Дизайн</button>
+          </li>
+          <li class="portfolio__list-item">
+            <button type="button" class="portfolio__button">Маркетинг</button>
+          </li>
+        </ul>
+        <section class="presentation">
+          <h2 class="visually-hidden">Презентація</h2>
+          <ul class="presentation__list list">
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <div class="presentation__foto">
+                  
+                  <picture class="presentation__foto-rotate">
+                        <source
+                          srcset="./img/progect1.jpg 1x, ./img/progect1@2x.jpg 2x"
+                          media="(max-width: 767px)"
+                        />
+                        <source
+                          srcset="
+                            ./img/tablet/progect1.jpg    1x,
+                            ./img/tablet/progect1@2x.jpg 2x
+                          "
+                          media="(max-width: 1199px)"
+                        />
+                        <source
+                          srcset="
+                            ./img/desctop/progect1.jpg    1x,
+                            ./img/desctop/progect1@2x.jpg 2x
+                          "
+                          media="(min-width: 1200px)"
+                        />
+                        <img src="./img/progect1.jpg" alt="ноутбук"   />
+                  </picture>
+                  <div class="presentation-overlay">
+                    <p class="presentation-overlay-text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
+                    </p>
+                    </div>
+                </div>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Технокряк</h3>
+                  <p class="presentation__paragraf">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <picture>
+                  <source
+                    srcset="./img/progect2.jpg 1x, ./img/progect2@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/tablet/progect2.jpg    1x,
+                      ./img/tablet/progect2@2x.jpg 2x
+                    "
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/desctop/progect2.jpg    1x,
+                      ./img/desctop/progect2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./img/progect2.jpg" alt="Баскет"   />
+                  </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Постер New Orlean vs Golden Star</h3>
+                  <p class="presentation__paragraf">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <picture>
+                  <source
+                    srcset="./img/progect3.jpg 1x, ./img/progect3@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/tablet/progect3.jpg    1x,
+                      ./img/tablet/progect3@2x.jpg 2x
+                    "
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/desctop/progect3.jpg    1x,
+                      ./img/desctop/progect3@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./img/progect3.jpg" alt="Ресторан"   />
+                  </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Ресторан Seafood</h3>
+                  <p class="presentation__paragraf">Приложение</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <picture>
+                  <source
+                    srcset="./img/progect4.jpg 1x, ./img/progect4@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/tablet/progect4.jpg    1x,
+                      ./img/tablet/progect4@2x.jpg 2x
+                    "
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/desctop/progect4.jpg    1x,
+                      ./img/desctop/progect4@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./img/progect4.jpg" alt="Навушники"   />
+                  </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Проект Prime</h3>
+                  <p class="presentation__paragraf">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <picture>
+                  <source
+                    srcset="./img/progect5.jpg 1x, ./img/progect5@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/tablet/progect5.jpg    1x,
+                      ./img/tablet/progect5@2x.jpg 2x
+                    "
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/desctop/progect5.jpg    1x,
+                      ./img/desctop/progect5@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./img/progect5.jpg" alt="Коробки"   />
+                  </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Проект Boxes</h3>
+                  <p class="presentation__paragraf">Приложение</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <picture>
+                  <source
+                    srcset="./img/progect6.jpg 1x, ./img/progect6@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/tablet/progect6.jpg    1x,
+                      ./img/tablet/progect6@2x.jpg 2x
+                    "
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/desctop/progect6.jpg    1x,
+                      ./img/desctop/progect6@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./img/progect6.jpg" alt="Я МАК"   />
+                  </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Inspiration has no Borders</h3>
+                  <p class="presentation__paragraf">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <picture>
+                  <source
+                    srcset="./img/progect7.jpg 1x, ./img/progect7@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/tablet/progect7.jpg    1x,
+                      ./img/tablet/progect7@2x.jpg 2x
+                    "
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/desctop/progect7.jpg    1x,
+                      ./img/desctop/progect7@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./img/progect7.jpg" alt="Книжка"   />
+                  </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Издание Limited Edition</h3>
+                  <p class="presentation__paragraf">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+              <picture>
+                <source
+                  srcset="./img/progect8.jpg 1x, ./img/progect8@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/tablet/progect8.jpg    1x,
+                    ./img/tablet/progect8@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/desctop/progect8.jpg    1x,
+                    ./img/desctop/progect8@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./img/progect8.jpg" alt="Маркетинг"   />
+                </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Проект LAB</h3>
+                  <p class="presentation__paragraf">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="presentation__list-item">
+              <a href="" class="presentation__card-link">
+                <picture>
+                  <source
+                    srcset="./img/progect9.jpg 1x, ./img/progect9@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/tablet/progect9.jpg    1x,
+                      ./img/tablet/progect9@2x.jpg 2x
+                    "
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/desctop/progect9.jpg    1x,
+                      ./img/desctop/progect9@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./img/progect9.jpg" alt="Додатки"   />
+                  </picture>
+                <div class="presentation__cards">
+                  <h3 class="presentation__title">Growing Business</h3>
+                  <p class="presentation__paragraf">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <!--+++++++++++++++++++++++++++++++++++++++     Підвал      ++++++++++++++++++++++++++++++++++++++-->
+    <footer class="footer">
+      <div class="container footer__block">
+       <div class="wrapper"> 
+        <div class="footer__block--logolink">
+          <a href="./index.html" class="footer__logo logo">Web<span class="logo-white">Studio</span></a>
+          <address class="address">
+            <ul class="footer__list">
+              <li>
+                <a
+                  href="https://goo.gl/maps/J4S7zrF2grUkDUh99"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  class="footer__address link"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li>
+                <a href="mail:info@example.com" class="footer__link link">info@example.com</a>
+              </li>
+              <li><a href="tel:+380991111111" class="footer__link link">+380991111111</a></li>
+            </ul>
+          </address>
+        </div>
+        <div class="join">
+          <p class="join__paragraf">присоединяйтесь</p>
+          <ul class="join__link">
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__link-item">
+              <a href="" class="soc-icon-link">
+                <svg class="soc-icon footer__socc-icon">
+                  <use xlink:href="./img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <form class="footer__form">
+          <strong class="footer__form-paragraf">Подпишитесь на рассылку</strong>
+          <div class="join__block">
+            <input class="join-input" type="email" name="email" id="email" placeholder="E-mail" />
+            <button type="submit" class="footer__button">
+              Подписаться
+              <svg class="footer__send-icon" width="24" height="24">
+                <use href="./img/sprite.svg#icon-iconfootersend"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>
